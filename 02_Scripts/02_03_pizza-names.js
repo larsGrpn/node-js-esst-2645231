@@ -1,3 +1,3 @@
 import { faker } from "@faker-js/faker";
 
-console.log(faker.person.firstName());
+console.log(faker.vehicle.vehicle());
