@@ -1,11 +1,15 @@
-const summe = process.argv[2]
-const summeAsNumber = summe * 1;
+const orderCosts = process.argv[2]
+const orderCostsNumber = summe * 1;
 
-if (summeAsNumber >= 35) {
-  console.log("keine Lieferkosten");
+if (Number.isNaN(orderCostsNumber)) {
+  console.log(orderCosts, "ist keine Zahl");
 } else {
-  const diffCost = 35 - summeAsNumber;
-  const deliveryCost = 0.2 * diffCost;
+  if (summeAsNumber >= 35) {
+    console.log("keine Lieferkosten");
+  } else {
+    const diffCost = 35 - summeAsNumber;
+    const deliveryCost = 0.2 * diffCost;
 
-  console.log("Lieferkosten", deliveryCost, "€");
+    console.log("Lieferkosten", deliveryCost, "€");
+  }
 }
